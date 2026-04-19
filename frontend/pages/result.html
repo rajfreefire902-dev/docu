@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result - DocuMind</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+<div class="result-container">
+    <div class="top-bar">
+        <button onclick="window.location.href='dashboard.html'" class="btn" style="width:120px;">← Dashboard</button>
+        <h1>Analysis Result</h1>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+
+    <div class="card result-card">
+        <h3>AI Comparison Report</h3>
+        <p><strong>Summary:</strong> <span id="summary"></span></p>
+        <p><strong>Similarities:</strong> <span id="similarities"></span></p>
+        <p><strong>Differences:</strong> <span id="differences"></span></p>
+        <p><strong>Missing Topics:</strong> <span id="missing"></span></p>
+    </div>
+
+    <div class="card chat-card">
+        <h3>Ask AI about these documents</h3>
+        <div id="chat-box"></div>
+        <div class="chat-input">
+            <input type="text" id="question" placeholder="Ask something...">
+            <button onclick="sendQuestion()">Send</button>
+        </div>
+    </div>
+</div>
+
+<script src="../scripts/api.js"></script>
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/chat.js"></script>
+<script src="../scripts/result.js"></script>
+
+</body>
+</html>
